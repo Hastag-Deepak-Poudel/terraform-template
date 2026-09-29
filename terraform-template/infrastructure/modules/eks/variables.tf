@@ -27,8 +27,8 @@ variable "node_groups" {
   }))
   default = [
     {
-      name           = "CT-EKS-Cluster-Node-Group"
-      instance_types = ["t3.medium"]
+      name           = "My-EKS-Cluster-Node-Group"
+      instance_types = ["t3.micro"]
       ami_type       = "AL2023_x86_64_STANDARD"
       capacity_type  = "ON_DEMAND"
       disk_size      = 20

@@ -1,7 +1,7 @@
 variable "aws_region" {
   type        = string
   description = "AWS region to use for resources."
-  default     = "us-east-1"
+  default     = "ap-south-1"
 }
 
 variable "cluster_config" {
@@ -10,14 +10,14 @@ variable "cluster_config" {
     version = string
   })
   default = {
-    name    = "CT-EKS-Cluster"
-    version = "1.32"
+    name    = "My-EKS-Cluster"
+    version = "1.34"
   }
 }
 variable "naming_prefix" {
   type        = string
   description = "Naming prefix for all resources."
-  default     = "CT-EKS"
+  default     = "My-EKS"
 }
 
 variable "environment" {
@@ -38,9 +38,9 @@ variable "networking" {
   })
   default = {
     cidr_block      = "10.0.0.0/16"
-    region          = "us-east-1"
+    region          = "ap-south-1"
     vpc_name        = "terraform-vpc"
-    azs             = ["us-east-1a", "us-east-1b"]
+    azs             = ["ap-south-1a", "ap-south-1b"]
     public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
     private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
     nat_gateways    = true
